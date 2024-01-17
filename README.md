@@ -1,9 +1,9 @@
 # The Evolutionary Abduction (EVA) Repository
 ## Source
 
-This repository contains the material of the following work: "An Evolutionary Strategy for Automatic Hypotheses Generation inspired by Abductive Reasoning", submitted for publication. 
+This repository contains the material of the following work: "Automatic generation of plausible co-occurring causes for effects explanation or prediction", submitted for publication. 
 
-The work proposes an evolutionary algorithm to solve a specific class of optimization problems, called Causal Combinatorial Optimization Problems (CCOP), making use of operators that emulate the abductive human reasoning. The algorithm automatically advances hypotheses for potential causes for a given effect, hence allowing to find the most plausible (accoridng to a defined plausibility metric) explanations for a certain event. The application is on 4 datasets (in medial, decision-support system, and safety engineering domains). Results show that the algorithm can predict hypotheses that are equal or very simialr to really-occurred events. 
+The work proposes an evolutionary algorithm to solve a causal optimization problems, making use of operators that emulate the abductive human reasoning. The algorithm automatically advances hypotheses for potential causes for a given effect, hence allowing to find the most plausible (accoridng to a defined plausibility metric) explanations for a certain event. The application is on 4 datasets (in medial, decision-support system, and safety engineering domains). Results show that the algorithm can predict hypotheses that are equal or very simialr to really-occurred events. 
 
 ## Description
 The repository contains the artefacts required to run EVA, as well as to reproduce the results reported in the paper. The code exploits  jMetal (https://github.com/jMetal), a Java framework to develop and experiment evolutionary algorithms. 
@@ -38,4 +38,3 @@ Note: in order to reproduce the same result of the paper, there are <run.sh> fil
 - RESULTS. It contains the results obtained for the four benchmarks described in the paper. There is one folder for EVA and one for all the baselines called GB. Inside, there is one folder per benchmark problem. Within these, there is a folder FINAL, with results of the main paper, obtained in the six configurations (BEST, WORST) x (Novelty constraint = 0.1, 0.4, 0.7). In the EVA folders, you will also find TUNING phase (with results of tuning, in which the BEST and WORST configurations have been found (see Appendix of the article)). All the results can be re-obtained (overwriting the existing ones) by simply running the <run.sh> (or tuning.sh for TUNING) scripts within these folders. 
 All the results (for EVA as well as for the four GB and RANDOM strategies adopted) are in the form of text files reporting the distances obtained for each algorithm with respect to the test dataset (*Ref*.txt files) as well as with respect to the knowledge base (*KB*.txt files), for every repetition. Other statistics are available too. 
 
-Finally, if a MOEA strategy has to be run among those showed in the paper, then refer to the CCOP repository (https://github.com/rpietrantuono/CCOP).
